@@ -46,9 +46,8 @@ model.compile(optimizer=sgd, loss='categorical_crossentropy', metrics=['accuracy
 startTime = time.time()
 history = model.fit(x_train, t_train, epochs=1000, batch_size=100, verbose=0, validation_data=(x_test, t_test))
 
-# 교차 엔트로피 및 정확도 출력
+# 교차 엔트로피 오차 및 정확도 출력
 score = model.evaluate(x_test, t_test, verbose=0)
 print("cross entropy {0:3.2f}, accuracy {1:3.2f}".format(score[0], score[1]))
 calculation_time = time.time() - startTime
 print("Calculation time:{0:.3f} sec".format(calculation_time))
-
