@@ -1,10 +1,11 @@
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
 import numpy as np
 import matplotlib.pyplot as plt
 import time
-import keras.optimizers
 import tensorflow as tf
-from keras.models import Sequential
-from keras.layers.core import Dense, Activation
+from tensorflow.keras.layers.core import Dense, Activation
 
 
 # 데이터 넣기
@@ -37,7 +38,7 @@ t_test = t[x_n_training:, :]
 
 # 신경망 모델 생성
 # Sequential 이라는 유형의 네트워크 model 생성
-model = Sequential()
+model = tf.keras.models.Sequential()
 model.add(Dense(2, input_dim=2, activation='sigmoid', kernel_initializer='uniform'))
 model.add(Dense(3, activation='softmax', kernel_initializer='uniform'))
 sgd = tf.keras.optimizers.SGD(lr=0.01, momentum=0.0, decay=0.0, nesterov=False)
