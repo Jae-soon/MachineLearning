@@ -21,7 +21,7 @@ y_test = np_utils.to_categorical(y_test, num_classes) # 1 - OF - K 부호화법
 np.random.seed(1)
 from keras.models import Sequential
 from keras.layers import Dense, Activation
-from tensorflow.keras.optimizers import Adam
+from keras.optimizers import Adam
 
 model = Sequential()
 model.add(Dense(16, input_dim=784, activation='relu'))# 중간층
