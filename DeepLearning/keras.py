@@ -5,8 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import time
 import tensorflow as tf
-from tensorflow.keras.layers.core import Dense, Activation
-
+from keras.layers.core import Dense, Activation
 
 # 데이터 넣기
 np.random.seed(seed=1)
