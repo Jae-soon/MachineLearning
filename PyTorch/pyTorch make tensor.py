@@ -1,10 +1,11 @@
 import torch
+import numpy as np
 
 # 1차원 텐서
 t = torch.FloatTensor([0., 1., 2., 3., 4., 5., 6.])
 print(t.dim())  # 차원
 print(t.shape)  # shape
-print(t.size()) # shape
+print(t.size()) # shapes
 
 # 2차원 텐서
 t = torch.FloatTensor([[1., 2., 3.],
