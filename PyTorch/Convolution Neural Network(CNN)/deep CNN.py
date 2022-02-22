@@ -32,7 +32,6 @@ data_loader = torch.utils.data.DataLoader(dataset=mnist_train,
                                           drop_last=True)
 
 class CNN(torch.nn.Module):
-    
     def __init__(self):
         super(CNN, self).__init__()
         self.keep_prob = 0.5
